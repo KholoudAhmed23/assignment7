@@ -13,6 +13,10 @@ class _Assignment7State extends State<Assignment7> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text("Assignment 7",style: TextStyle(fontWeight: FontWeight.bold),)),
+        backgroundColor: Colors.blue,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -89,7 +93,7 @@ class _Assignment7State extends State<Assignment7> {
                 });
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: isFollowed ? Colors.red : Colors.blue,
+                backgroundColor: isFollowed ? Colors.red : Colors.blueAccent,
                 foregroundColor: Colors.white,
               ),
               child: Text(isFollowed ? 'Unfollow' : 'Follow'),
@@ -111,7 +115,8 @@ class _Assignment7State extends State<Assignment7> {
             ),
           );
         },
-        child: Icon(Icons.add_comment_rounded),
+        child: Icon(Icons.message),
+        backgroundColor: Colors.blue,
       ),
     );
   }
